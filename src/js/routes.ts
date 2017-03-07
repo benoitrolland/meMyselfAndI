@@ -1,5 +1,4 @@
-import {Public} from "./public/public.routes";
-import {DataTable} from "./table/routes";
+import {Demo} from "./demo/demo.routes";
 
 /**
  * Created by ramor11 on 4/19/2016.
@@ -11,8 +10,6 @@ export class RouteProvider {
 
     constructor(private states) {
         //public routes no authentication needed
-        states.inject(Public.routes);
-        states.inject(DataTable.routes);
-
+        states.inject(Demo.routes);
     }
 }

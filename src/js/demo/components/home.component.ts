@@ -6,18 +6,22 @@
 "use strict";
 
 class HomeCtrl {
-
+    
     static $inject = ['$scope'];
-
+    
     constructor(private $scope) {
     }
-
-
+    
+    
 }
+
+require('./styles.less');
+
+
 export class HomeComponent implements ng.IComponentOptions {
     public controller: any;
     public template: string;
-
+    
     constructor() {
         this.template = require('./home.component.html');
         this.controller = HomeCtrl
