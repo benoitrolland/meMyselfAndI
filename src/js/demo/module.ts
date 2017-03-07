@@ -22,7 +22,13 @@ var app = angular.module("app.impress", []);
  * */
 
 import {HomeComponent} from "./components/home.component";
+import {OneComponent} from "./steps/one/one.component";
+import {TwoComponent} from "./steps/two/two.component";
+import {ThreeComponent} from "./steps/three/three.component";
 
 app.component('eqHome', new HomeComponent());
+app.component('stepOne', new OneComponent());
+app.component('stepTwo', new TwoComponent());
+app.component('stepThree', new ThreeComponent());
 
 module.exports = app;
