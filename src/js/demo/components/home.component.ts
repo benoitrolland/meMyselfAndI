@@ -5,11 +5,22 @@
 
 "use strict";
 
+declare let impress:any;
+
 class HomeCtrl {
     
     static $inject = ['$scope'];
     
     constructor(private $scope) {
+        
+    }
+    
+    $onInit(){
+        if ("ontouchstart" in document.documentElement) {
+            document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+        }
+        
+        impress().init();
     }
     
     

@@ -10,7 +10,7 @@
         "font-awesome": "fontawesome#^4.7.0",
         "rx-angular": "angular-rx#^1.1.3",
         "myo": "https://github.com/thalmiclabs/myo.js.git",
-        "impress": "https://github.com/impress/impress.js/",
+        "impress": "https://github.com/impress/impress.js.git",
         "reveal": "https://github.com/hakimel/reveal.js.git"
     },
     "appPath": "app",

@@ -4,7 +4,7 @@
 import * as angular from "angular";
 import {RouteProvider} from "./routes";
 
-// require("css/styles.less");
+require("css/styles.less");
 
 export let app: any = angular.module('app', [
     'ui.router'
