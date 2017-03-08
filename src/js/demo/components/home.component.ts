@@ -7,12 +7,19 @@
 
 declare let impress:any;
 
+var Myo = require('myo');
+
+
 class HomeCtrl {
     
     static $inject = ['$scope'];
     
+    
+    private Myo;
+    
     constructor(private $scope) {
         
+        // this.Myo = new Myo();
     }
     
     $onInit(){
@@ -21,6 +28,9 @@ class HomeCtrl {
         }
         
         impress().init();
+    
+        
+        
     }
     
     

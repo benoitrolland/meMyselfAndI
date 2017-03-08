@@ -54,14 +54,15 @@ module.exports = {
 		alias: {
 			angular: "angular",
 			jquery: 'jquery/dist/jquery',
-			rx: "rxjs/index"
+			rx: "rxjs/index",
+			myo: "myo/myo"
 		}
 	},
 	module: {
 		rules: [
 			{
 				test: /\.ts$/,
-				use: ["babel-loader","awesome-typescript-loader", "angular1-template-loader"],
+				use: ["babel-loader", "awesome-typescript-loader", "angular1-template-loader"],
 				exclude: [/\.(spec|e2e|d)\.ts$/]
 			},
 			{
@@ -192,7 +193,7 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			// hash: true,
-			baseUrl :"/",
+			baseUrl: "/",
 			minify: {
 				removeComments: true,
 				collapseWhitespace: true,
