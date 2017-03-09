@@ -11,6 +11,7 @@ export let app: any = angular.module('app', [
     , 'ngSanitize'
     , 'oc.lazyLoad'
     , require('./core').name
+    , require('./impress/module').name
 ]);
 
 
