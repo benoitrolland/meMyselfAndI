@@ -25,10 +25,12 @@ import {ImpressComponent} from "./impress.component";
 import {OneComponent} from "./steps/one/one.component";
 import {TwoComponent} from "./steps/two/two.component";
 import {ThreeComponent} from "./steps/three/three.component";
+import {FourComponent} from "./steps/four/four.component";
 
 app.component('impress', new ImpressComponent());
 app.component('stepOne', new OneComponent());
 app.component('stepTwo', new TwoComponent());
 app.component('stepThree', new ThreeComponent());
+app.component('stepFour', new FourComponent());
 
 module.exports = app;
