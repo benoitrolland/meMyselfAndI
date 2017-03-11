@@ -7,7 +7,7 @@
 import * as angular from "angular";
 
 
-var app = angular.module("app.impress", []);
+var app = angular.module("app.impress", ["cfp.hotkeys"]);
 
 
 /**

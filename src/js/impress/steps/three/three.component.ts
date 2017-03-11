@@ -5,15 +5,23 @@ require('./style.less');
 
 class ThreeComponentCtrl implements ng.IComponentController {
 
-    static $inject: Array<string> = ['$element'];
+    static $inject: Array<string> = ['$scope', 'hotkeys'];
 
-    constructor(private $element) {
+    constructor(private $scope, private hotkeys) {
 
     }
 
     $onInit() {
 
-
+        this.hotkeys.bindTo(this.$scope)
+            .add({
+                combo      : 's',
+                description: 'strikethrough rey',
+                callback   : () => {
+                    let rey = $('.rey .name');
+                    rey.addClass('strikethrough')
+                }
+            })
     }
 }
 

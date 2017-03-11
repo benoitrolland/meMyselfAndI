@@ -1,21 +1,66 @@
 step-three {
-    #tiny {
-        width: 500px;
-        height: 165px;
-        text-align: center;
-        background-image: url("~img/puerto-rico-map-outline-silhouette.png");
-        background-position: bottom left;
-        background-repeat: no-repeat;
-        background-size: 100%;
+    .rey {
+        margin: 10% 20%;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .active.present {
 
         .rey {
-            background-image: url("~img/rey.jpg");
-            background-position: bottom left;
-            background-repeat: no-repeat;
-            background-size: 65px;
-            width: 100px;
-            height: 100px;
+            animation: fade .5s ease-in-out forwards;
+            animation-delay: .5s;
         }
 
+        /* fade in */
+        li {
+            opacity: 0;
+            margin-bottom: 15px;
+        }
+
+        li.name {
+            animation: fade 2s ease-in-out forwards;
+            animation-delay: 1s;
+
+            &.strikethrough {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 160px;
+                    height: 3px;
+                    background-color: red;
+                    left: -50px;
+                    top: 18px;
+                    transform: rotateZ(3deg);
+                }
+            }
+        }
+
+        li.job {
+            animation: fade 2s ease-in-out forwards;
+            animation-delay: 2.5s;
+        }
+
+        li.github {
+            animation: fade 2s ease-in-out forwards;
+            animation-delay: 4s;
+        }
+
+        li.cars {
+            animation: fade 2s ease-in-out forwards;
+            animation-delay: 5.5s;
+        }
+
+        li.pets {
+            animation: fade 2s ease-in-out forwards;
+            animation-delay: 7s;
+        }
+
+    }
+
+    @keyframes fade {
+        100% {
+            opacity: 1;
+        }
     }
 }
