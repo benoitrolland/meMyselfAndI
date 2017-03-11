@@ -15,10 +15,31 @@ class ThreeComponentCtrl implements ng.IComponentController {
 
         this.hotkeys.bindTo(this.$scope)
             .add({
-                combo      : 's',
+                combo      : 'a',
                 description: 'strikethrough rey',
                 callback   : () => {
                     let rey = $('.rey .name');
+                    rey.addClass('strikethrough')
+                }
+            })
+
+
+        this.hotkeys.bindTo(this.$scope)
+            .add({
+                combo      : 's',
+                description: 'strikethrough job',
+                callback   : () => {
+                    let rey = $('.rey .job');
+                    rey.addClass('strikethrough')
+                }
+            })
+
+        this.hotkeys.bindTo(this.$scope)
+            .add({
+                combo      : 'd',
+                description: 'strikethrough github',
+                callback   : () => {
+                    let rey = $('.rey .github');
                     rey.addClass('strikethrough')
                 }
             })

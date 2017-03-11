@@ -16,11 +16,6 @@ step-three {
         li {
             opacity: 0;
             margin-bottom: 15px;
-        }
-
-        li.name {
-            animation: fade 2s ease-in-out forwards;
-            animation-delay: 1s;
 
             &.strikethrough {
                 &:after {
@@ -36,25 +31,44 @@ step-three {
             }
         }
 
+        li.name {
+            animation: fade 2s ease-in-out forwards;
+            animation-delay: 1s;
+
+        }
+
         li.job {
             animation: fade 2s ease-in-out forwards;
             animation-delay: 2.5s;
+            &:after {
+                width: 350px;
+                background-color: blue;
+                transform: rotateZ(-3deg);
+            }
         }
 
         li.github {
             animation: fade 2s ease-in-out forwards;
             animation-delay: 4s;
+            &:after {
+                width: 220px;
+                transform: rotateasZ(2deg);
+            }
         }
 
         li.cars {
             animation: fade 2s ease-in-out forwards;
             animation-delay: 5.5s;
         }
-
         li.pets {
             animation: fade 2s ease-in-out forwards;
             animation-delay: 7s;
         }
+        //
+        //li.pets {
+        //    animation: fade 2s ease-in-out forwards;
+        //    animation-delay: 8.5s;
+        //}
 
     }
 
