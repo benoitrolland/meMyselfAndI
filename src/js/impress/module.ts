@@ -26,6 +26,7 @@ import {ListComponent} from "./steps/list/list.component";
 import {ReyComponent} from "./steps/rey/rey.component";
 import {PRComponent} from "./steps/pr/pr.component";
 import {WebComponent} from "./steps/web/web.component";
+import {CodeComponent} from "./steps/codeding/code.component";
 
 app.component('impress', new ImpressComponent());
 app.component('stepList', new ListComponent());
@@ -35,5 +36,6 @@ app.service('Impress', ImpressService);
 app.component('stepRey', new ReyComponent());
 app.component('stepPr', new PRComponent());
 app.component('stepWeb', new WebComponent());
+app.component('stepCode', new CodeComponent());
 
 module.exports = app;
