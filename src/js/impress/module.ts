@@ -21,16 +21,19 @@ var app = angular.module("app.impress", ["cfp.hotkeys"]);
  *
  * */
 
-import {ImpressComponent} from "./impress.component";
-import {OneComponent} from "./steps/one/one.component";
-import {TwoComponent} from "./steps/two/two.component";
-import {ThreeComponent} from "./steps/three/three.component";
-import {FourComponent} from "./steps/four/four.component";
+import {ImpressComponent, ImpressService} from "./impress.component";
+import {ListComponent} from "./steps/list/list.component";
+import {ReyComponent} from "./steps/rey/rey.component";
+import {PRComponent} from "./steps/pr/pr.component";
+import {WebComponent} from "./steps/web/web.component";
 
 app.component('impress', new ImpressComponent());
-app.component('stepOne', new OneComponent());
-app.component('stepTwo', new TwoComponent());
-app.component('stepThree', new ThreeComponent());
-app.component('stepFour', new FourComponent());
+app.component('stepList', new ListComponent());
+
+app.service('Impress', ImpressService);
+
+app.component('stepRey', new ReyComponent());
+app.component('stepPr', new PRComponent());
+app.component('stepWeb', new WebComponent());
 
 module.exports = app;

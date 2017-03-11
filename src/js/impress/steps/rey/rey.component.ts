@@ -4,12 +4,10 @@
 
 require('./style.less');
 
-export class TwoComponent implements ng.IComponentOptions {
-    // public controller: any;
+export class ReyComponent implements ng.IComponentOptions {
     public template: string;
 
     constructor() {
         this.template = require('./two.html');
-        // this.controller = HomeCtrl
     }
 }

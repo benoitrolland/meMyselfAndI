@@ -7,25 +7,42 @@
 
 declare let impress: any;
 
-var Myo = require('myo');
+// var Myo = require('myo');
+
+export class ImpressService {
+    static instance: ImpressService;
+    private api;
+
+    constructor() {
+    }
+
+    Init() {
+        this.api = impress();
+        this.api.init();
+    }
+
+    getApi() {
+        return this.api;
+    }
+}
 
 
 class ImpressComponentCtrl {
 
-    static $inject = ['$element'];
+    static $inject = ['$element', 'Impress'];
 
 
-    private Myo;
-
-    constructor(private $element) {
-
-        // this.Myo = new Myo();
+    constructor(private $element, private Impress) {
         $element.attr('id', 'impress')
+        Impress.Init();
     }
 
-    $onInit() {
-        impress().init();
-    }
+    // $onInit() {
+    //
+    //     let api = new ImpressService();
+    //     api.Init();
+    //
+    // }
 
 
 }

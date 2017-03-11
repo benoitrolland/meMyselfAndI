@@ -3,7 +3,7 @@
  */
 require('./style.less');
 
-class ThreeComponentCtrl implements ng.IComponentController {
+class ListComponentCtrl implements ng.IComponentController {
 
     static $inject: Array<string> = ['$scope', 'hotkeys'];
 
@@ -47,12 +47,12 @@ class ThreeComponentCtrl implements ng.IComponentController {
 }
 
 
-export class ThreeComponent implements ng.IComponentOptions {
+export class ListComponent implements ng.IComponentOptions {
     public controller: any;
     public template: string;
 
     constructor() {
-        this.template = require('./three.html');
-        this.controller = ThreeComponentCtrl
+        this.template = require('./list.html');
+        this.controller = ListComponentCtrl
     }
 }
