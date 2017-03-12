@@ -82,6 +82,27 @@ class ImpressComponentCtrl {
                 }
             })
             .add({
+                combo      : '7',
+                description: 'Route To 7',
+                callback   : () => {
+                    impress.goto(7)
+                }
+            })
+            .add({
+                combo      : '8',
+                description: 'Route To 8',
+                callback   : () => {
+                    impress.goto(8)
+                }
+            })
+            .add({
+                combo      : '9',
+                description: 'Route To 9',
+                callback   : () => {
+                    impress.goto(9)
+                }
+            })
+            .add({
                 combo      : '0',
                 description: 'Route To Overview',
                 callback   : () => {
