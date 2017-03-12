@@ -11,15 +11,7 @@ class WebComponentCtrl implements ng.IComponentController {
 
     $onInit() {
 
-        this.hotkeys.bindTo(this.$scope)
-            .add({
-                combo      : '3',
-                description: 'Route To Web',
-                callback   : () => {
-                    let impress = this.impress.getApi();
-                    impress.goto(3)
-                }
-            });
+
 
     }
 }

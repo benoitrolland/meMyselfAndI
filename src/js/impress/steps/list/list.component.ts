@@ -14,35 +14,94 @@ class ListComponentCtrl implements ng.IComponentController {
     $onInit() {
 
         this.hotkeys.bindTo(this.$scope)
+        //REY
             .add({
                 combo      : 'a',
-                description: 'strikethrough rey',
+                description: 'Enter rey',
+                callback   : () => {
+                    let rey = $('.rey .name');
+                    rey.addClass('enter')
+                }
+            })
+            .add({
+                combo      : 'j',
+                description: 'Done rey',
                 callback   : () => {
                     let rey = $('.rey .name');
                     rey.addClass('strikethrough')
                 }
             })
-
-
-        this.hotkeys.bindTo(this.$scope)
+            //JOB
             .add({
                 combo      : 's',
-                description: 'strikethrough job',
+                description: 'Enter rey',
+                callback   : () => {
+                    let rey = $('.rey .job');
+                    rey.addClass('enter')
+                }
+            })
+            .add({
+                combo      : 'k',
+                description: 'Done job',
                 callback   : () => {
                     let rey = $('.rey .job');
                     rey.addClass('strikethrough')
                 }
             })
-
-        this.hotkeys.bindTo(this.$scope)
+            //GITHUB
             .add({
                 combo      : 'd',
-                description: 'strikethrough github',
+                description: 'Enter Github',
+                callback   : () => {
+                    let rey = $('.rey .github');
+                    rey.addClass('enter')
+                }
+            })
+            .add({
+                combo      : 'l',
+                description: 'Done github',
                 callback   : () => {
                     let rey = $('.rey .github');
                     rey.addClass('strikethrough')
                 }
             })
+
+            //CARS
+            .add({
+                combo      : 'f',
+                description: 'Enter Cars',
+                callback   : () => {
+                    let rey = $('.rey .cars');
+                    rey.addClass('enter')
+                }
+            })
+            .add({
+                combo      : ';',
+                description: 'Done Cars',
+                callback   : () => {
+                    let rey = $('.rey .cars');
+                    rey.addClass('strikethrough')
+                }
+            })
+
+            //DOGS
+            .add({
+                combo      : 'g',
+                description: 'Enter pets',
+                callback   : () => {
+                    let rey = $('.rey .pets');
+                    rey.addClass('enter')
+                }
+            })
+            .add({
+                combo      : '\'',
+                description: 'Done pets',
+                callback   : () => {
+                    let rey = $('.rey .pets');
+                    rey.addClass('strikethrough')
+                }
+            })
+
     }
 }
 

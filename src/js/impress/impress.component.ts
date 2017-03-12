@@ -6,9 +6,6 @@
 "use strict";
 
 declare let impress: any;
-
-// var Myo = require('myo');
-
 export class ImpressService {
     static instance: ImpressService;
     private api;
@@ -29,20 +26,70 @@ export class ImpressService {
 
 class ImpressComponentCtrl {
 
-    static $inject = ['$element', 'Impress'];
 
+    static $inject: Array<string> = ['$element', '$scope', 'hotkeys', 'Impress'];
 
-    constructor(private $element, private Impress) {
-        $element.attr('id', 'impress')
+    constructor(private $element, private $scope, private hotkeys, private Impress) {
+        $element.attr('id', 'impress');
         Impress.Init();
     }
 
-    // $onInit() {
-    //
-    //     let api = new ImpressService();
-    //     api.Init();
-    //
-    // }
+
+    $onInit() {
+        let impress = this.Impress.getApi();
+
+        this.hotkeys.bindTo(this.$scope)
+            .add({
+                combo      : '1',
+                description: 'Route To 1',
+                callback   : () => {
+                    impress.goto(0)
+                }
+            })
+            .add({
+                combo      : '2',
+                description: 'Route To 2',
+                callback   : () => {
+                    impress.goto(2)
+                }
+            })
+            .add({
+                combo      : '3',
+                description: 'Route To 3',
+                callback   : () => {
+                    impress.goto(3)
+                }
+            })
+            .add({
+                combo      : '4',
+                description: 'Route To 4',
+                callback   : () => {
+                    impress.goto(4)
+                }
+            })
+            .add({
+                combo      : '5',
+                description: 'Route To 5',
+                callback   : () => {
+                    impress.goto(5)
+                }
+            })
+            .add({
+                combo      : '6',
+                description: 'Route To 6',
+                callback   : () => {
+                    impress.goto(6)
+                }
+            })
+            .add({
+                combo      : '0',
+                description: 'Route To Overview',
+                callback   : () => {
+                    impress.goto("overview")
+                }
+            })
+
+    }
 
 
 }

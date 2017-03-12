@@ -11,15 +11,7 @@ class CodeComponentCtrl implements ng.IComponentController {
 
     $onInit() {
 
-        this.hotkeys.bindTo(this.$scope)
-            .add({
-                combo      : '4',
-                description: 'Route To Code',
-                callback   : () => {
-                    let impress = this.impress.getApi();
-                    impress.goto(4)
-                }
-            });
+
 
     }
 }

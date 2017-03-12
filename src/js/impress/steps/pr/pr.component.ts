@@ -12,15 +12,7 @@ class PrComponentCtrl implements ng.IComponentController {
 
     $onInit() {
 
-        this.hotkeys.bindTo(this.$scope)
-            .add({
-                combo      : '1',
-                description: 'Route To List',
-                callback   : () => {
-                    let impress = this.impress.getApi();
-                    impress.goto(0)
-                }
-            });
+
 
     }
 }

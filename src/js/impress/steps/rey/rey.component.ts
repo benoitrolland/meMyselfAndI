@@ -8,6 +8,6 @@ export class ReyComponent implements ng.IComponentOptions {
     public template: string;
 
     constructor() {
-        this.template = require('./two.html');
+        this.template = require('./rey.html');
     }
 }

@@ -22,36 +22,40 @@ step-list {
                     transform: rotateZ(3deg);
                 }
             }
-        }
-        li.name {
-            animation: fade 2s ease-in-out forwards;
-            animation-delay: 1s;
+            &.enter {
+                animation: fade 2s ease-in-out forwards;
+                animation-delay: 1s;
+            }
+            &.name {
+                //animation: fade 2s ease-in-out forwards;
+                //animation-delay: 1s;
+            }
+            &.job {
 
-        }
-        li.job {
-            animation: fade 2s ease-in-out forwards;
-            animation-delay: 2.5s;
-            &:after {
-                width: 350px;
-                background-color: blue;
-                transform: rotateZ(-3deg);
+                //animation: fade 2s ease-in-out forwards;
+                //animation-delay: 2.5s;
+                //&:after {
+                //    width: 350px;
+                //    background-color: blue;
+                //    transform: rotateZ(-3deg);
+                //}
             }
-        }
-        li.github {
-            animation: fade 2s ease-in-out forwards;
-            animation-delay: 4s;
-            &:after {
-                width: 220px;
-                transform: rotateasZ(2deg);
+            &.github {
+                //animation: fade 2s ease-in-out forwards;
+                //animation-delay: 4s;
+                //&:after {
+                //    width: 220px;
+                //    transform: rotateasZ(2deg);
+                //}
             }
-        }
-        li.cars {
-            animation: fade 2s ease-in-out forwards;
-            animation-delay: 5.5s;
-        }
-        li.pets {
-            animation: fade 2s ease-in-out forwards;
-            animation-delay: 7s;
+            &.cars {
+                //animation: fade 2s ease-in-out forwards;
+                //animation-delay: 5.5s;
+            }
+            &.pets {
+                //animation: fade 2s ease-in-out forwards;
+                //animation-delay: 7s;
+            }
         }
     }
 
