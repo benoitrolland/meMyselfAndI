@@ -29,6 +29,8 @@ import {WebComponent} from "./steps/web/web.component";
 import {CodeComponent} from "./steps/codeding/code.component";
 import {ParamountComponent, GreetingsComponent} from "./steps/paramount/paramount.component";
 import {AccessoComponent} from "./steps/accesso/accesso.component";
+import {HobbiesComponent} from "./steps/hobbies/hobbies.component";
+import {PetsComponent} from "./steps/pets/pets.component";
 
 app.component('impress', new ImpressComponent());
 app.component('stepList', new ListComponent());
@@ -42,5 +44,7 @@ app.component('stepCode', new CodeComponent());
 app.component('stepParamount', new ParamountComponent());
 app.component('stepGreetings', new GreetingsComponent());
 app.component('stepAccesso', new AccessoComponent());
+app.component('stepHobbies', new HobbiesComponent());
+app.component('stepPets', new PetsComponent());
 
 module.exports = app;
