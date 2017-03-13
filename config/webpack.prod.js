@@ -88,7 +88,7 @@ module.exports = webpackMerge(commonConfig, {
 		}),
 		new HtmlWebpackPlugin({
 			hash: true,
-			baseUrl: "http://reyramos.github.io/meMyselfAndI/",
+			baseUrl: "//reyramos.github.io/meMyselfAndI/",
 			// baseUrl: "/",
 			minify: {
 				removeComments: true,
